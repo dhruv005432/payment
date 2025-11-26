@@ -1,0 +1,77 @@
+<div class="container my-5 pricing-page">
+
+  <!-- Header -->
+  <div class="text-center mb-4">
+    <h2 class="fw-bold"><i class="fa fa-tags me-2 text-primary"></i>Our Pricing Plans</h2>
+    <p class="text-muted">Choose the best plan that fits your needs</p>
+
+    <!-- Monthly / Yearly Toggle -->
+    <div class="btn-group btn-group-toggle mt-3" ngbRadioGroup [(ngModel)]="billingCycle">
+      <label class="btn btn-outline-primary" [class.active]="billingCycle==='monthly'">
+        <input type="radio" name="billingCycle" value="monthly"> Monthly
+      </label>
+      <label class="btn btn-outline-primary" [class.active]="billingCycle==='yearly'">
+        <input type="radio" name="billingCycle" value="yearly"> Yearly
+      </label>
+    </div>
+  </div>
+
+  <!-- Pricing Cards -->
+  <div class="row text-center mb-5">
+    <div class="col-md-4 mb-3" *ngFor="let plan of plans">
+      <div class="card shadow-sm h-100">
+        <div class="card-body d-flex flex-column">
+          <h5 class="card-title fw-bold">{{ plan.name }}</h5>
+          <h6 class="card-price my-3">{{ billingCycle==='monthly' ? plan.monthly : plan.yearly }}/month</h6>
+          <ul class="list-unstyled mb-4 flex-grow-1">
+            <li *ngFor="let feature of plan.features"><i class="fa fa-check text-success me-2"></i>{{ feature }}</li>
+          </ul>
+          <button class="btn btn-primary mt-auto w-100" (click)="selectPlan(plan)">
+            <i class="fa fa-arrow-right me-2"></i>Select Plan
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Feature Comparison Table -->
+  <div class="table-responsive mb-5">
+    <table class="table table-bordered text-center align-middle">
+      <thead class="table-light">
+        <tr>
+          <th>Features</th>
+          <th *ngFor="let plan of plans">{{ plan.name }}</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let feature of featureList">
+          <td class="text-start">{{ feature.name }}</td>
+          <td *ngFor="let plan of plans">
+            <i *ngIf="plan.features.includes(feature.name)" class="fa fa-check text-success"></i>
+            <i *ngIf="!plan.features.includes(feature.name)" class="fa fa-times text-danger"></i>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- FAQs -->
+  <div class="mb-5">
+    <h4 class="fw-bold mb-3"><i class="fa fa-question-circle me-2 text-warning"></i>Pricing FAQs</h4>
+    <div class="accordion" id="pricingFaq">
+      <div class="accordion-item" *ngFor="let faq of faqs; let i = index">
+        <h2 class="accordion-header" id="heading{{i}}">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" 
+                  [attr.data-bs-target]="'#collapse'+i" aria-expanded="false" 
+                  [attr.aria-controls]="'collapse'+i">
+            {{ faq.question }}
+          </button>
+        </h2>
+        <div [id]="'collapse'+i" class="accordion-collapse collapse" [attr.aria-labelledby]="'heading'+i" data-bs-parent="#pricingFaq">
+          <div class="accordion-body">{{ faq.answer }}</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
