@@ -1,0 +1,12 @@
+.checkout-container {
+  padding-top: 40px;
+}
+
+mat-card {
+  padding: 20px;
+  border-radius: 12px;
+}
+
+mat-radio-button {
+  margin-right: 15px;
+}

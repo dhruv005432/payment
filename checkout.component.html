@@ -1,0 +1,67 @@
+<div class="checkout-container" style="max-width: 900px; margin: auto; padding: 20px;">
+
+  <mat-card>
+    <h2>Checkout</h2>
+
+    <mat-divider class="my-3"></mat-divider>
+
+    <!-- User Details -->
+    <div class="mb-4">
+      <h4>User Details</h4>
+      <mat-form-field appearance="outline" class="w-100 mb-2">
+        <mat-label>Name</mat-label>
+        <input matInput [(ngModel)]="user.name">
+      </mat-form-field>
+
+      <mat-form-field appearance="outline" class="w-100 mb-2">
+        <mat-label>Email</mat-label>
+        <input matInput [(ngModel)]="user.email">
+      </mat-form-field>
+
+      <mat-form-field appearance="outline" class="w-100 mb-2">
+        <mat-label>Mobile</mat-label>
+        <input matInput [(ngModel)]="user.mobile">
+      </mat-form-field>
+    </div>
+
+    <mat-divider class="my-3"></mat-divider>
+
+    <!-- Order Summary -->
+    <div class="mb-4">
+      <h4>Order Summary</h4>
+      <p><strong>Plan:</strong> {{ plan.name }}</p>
+      <p><strong>Price:</strong> ₹{{ plan.price }}</p>
+      <p><strong>Validity:</strong> {{ plan.validity }}</p>
+
+      <!-- Coupon -->
+      <mat-form-field appearance="outline" class="w-50 me-2">
+        <mat-label>Coupon Code</mat-label>
+        <input matInput [(ngModel)]="couponCode">
+      </mat-form-field>
+      <button mat-raised-button color="primary" (click)="applyCoupon()">Apply</button>
+
+      <p class="mt-2"><strong>Discount:</strong> ₹{{ discount }}</p>
+      <p><strong>GST ({{ gst }}%):</strong> ₹{{ ((plan.price - discount) * gst / 100) | number:'1.0-2' }}</p>
+      <h3>Total: ₹{{ totalAmount | number:'1.0-2' }}</h3>
+    </div>
+
+    <mat-divider class="my-3"></mat-divider>
+
+    <!-- Payment Method -->
+    <div class="mb-4">
+      <h4>Select Payment Method</h4>
+      <mat-radio-group [(ngModel)]="paymentMethod">
+        <mat-radio-button value="card" class="me-3">Card</mat-radio-button>
+        <mat-radio-button value="upi" class="me-3">UPI</mat-radio-button>
+        <mat-radio-button value="wallet" class="me-3">Wallet</mat-radio-button>
+        <mat-radio-button value="netbanking">Net Banking</mat-radio-button>
+      </mat-radio-group>
+    </div>
+
+    <!-- Pay Now Button -->
+    <button mat-raised-button color="primary" class="w-100" (click)="payNow()">
+      <mat-icon>credit_card</mat-icon> Pay Now
+    </button>
+
+  </mat-card>
+</div>

@@ -1,0 +1,27 @@
+<div class="failed-wrapper d-flex justify-content-center align-items-center">
+  <div class="failed-box p-4 text-center">
+
+    <!-- RED ERROR ICON -->
+    <i class="fas fa-times-circle error-icon mb-3"></i>
+
+    <!-- Failure Message -->
+    <h2 class="text-danger fw-bold">Payment Failed</h2>
+    <p class="text-muted mb-4">Your payment could not be processed.</p>
+
+    <!-- REASON -->
+    <div class="details-card p-4 rounded shadow-sm mb-3">
+      <p><strong>Reason:</strong> {{ reason }}</p>
+    </div>
+
+    <!-- Retry Payment Button -->
+    <button class="btn btn-danger w-100 mb-3" (click)="retryPayment()">
+      <i class="fas fa-redo me-2"></i> Retry Payment
+    </button>
+
+    <!-- Contact Support Button -->
+    <button class="btn btn-secondary w-100" (click)="contactSupport()">
+      <i class="fas fa-headset me-2"></i> Contact Support
+    </button>
+
+  </div>
+</div>

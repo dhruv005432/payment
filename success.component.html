@@ -1,0 +1,29 @@
+<div class="success-wrapper d-flex justify-content-center align-items-center">
+  <div class="success-box p-4 text-center">
+
+    <!-- FULL BIG GREEN TICK ICON -->
+    <i class="fas fa-check-circle success-icon mb-3"></i>
+
+    <!-- Success Message -->
+    <h2 class="text-success fw-bold">Payment Successful ✔✔✔</h2>
+    <p class="text-muted mb-4">Your payment has been completed successfully.</p>
+
+    <!-- DETAILS CARD -->
+    <div class="details-card p-4 rounded shadow-sm">
+      <p><strong>Transaction ID:</strong> {{ transactionId }}</p>
+      <p><strong>Plan:</strong> {{ planName }}</p>
+      <p><strong>Validity:</strong> {{ validity }}</p>
+
+      <!-- Download Invoice -->
+      <button class="btn btn-primary w-100 mt-3" (click)="downloadInvoice()">
+        <i class="fas fa-file-download me-2"></i> Download Invoice
+      </button>
+
+      <!-- Continue Button -->
+      <button class="btn btn-success w-100 mt-3" (click)="continue()">
+        <i class="fas fa-arrow-right me-2"></i> Continue
+      </button>
+    </div>
+
+  </div>
+</div>

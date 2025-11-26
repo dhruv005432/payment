@@ -1,0 +1,25 @@
+.failed-wrapper {
+  height: 100vh;
+  background: #ffecec; /* Soft red background */
+}
+
+.failed-box {
+  max-width: 450px;
+  background: #ffffff;
+  border-radius: 18px;
+  box-shadow: 0px 5px 16px rgba(0,0,0,0.12);
+}
+
+.error-icon {
+  font-size: 100px;  /* BIG ICON ✔ */
+  color: #dc3545;     /* Red */
+}
+
+.details-card {
+  background: #fafafa;
+  border: 1px solid #dedede;
+}
+
+button {
+  font-size: 16px;
+}

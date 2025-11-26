@@ -1,0 +1,25 @@
+.success-wrapper {
+  height: 100vh;
+  background: #eaffea; /* soft green glow */
+}
+
+.success-box {
+  max-width: 450px;
+  background: #ffffff;
+  border-radius: 18px;
+  box-shadow: 0px 5px 16px rgba(0,0,0,0.12);
+}
+
+.success-icon {
+  font-size: 100px;   /* FULL BIG ICON ✔✔✔ */
+  color: #28a745;
+}
+
+.details-card {
+  background: #fafafa;
+  border: 1px solid #dedede;
+}
+
+button {
+  font-size: 16px;
+}
