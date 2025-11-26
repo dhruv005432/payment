@@ -1,0 +1,7 @@
+.history-page .table th, .history-page .table td {
+  vertical-align: middle;
+}
+
+.history-page .btn-sm i {
+  font-size: 14px;
+}

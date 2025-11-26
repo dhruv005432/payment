@@ -1,0 +1,108 @@
+<div class="payment-home container py-5">
+
+  <!-- HERO SECTION -->
+  <div class="text-center mb-5">
+    <h1 class="fw-bold">Make Secure & Fast Payments</h1>
+    <p class="text-muted fs-5">Choose your plan and complete payment instantly</p>
+
+    <button (click)="goToPayment()" class="btn btn-primary btn-lg m-2">
+      Pay Now
+    </button>
+
+    <button (click)="goToPlans()" class="btn btn-outline-primary btn-lg m-2">
+      View Plans
+    </button>
+  </div>
+
+  <!-- FEATURES SECTION -->
+  <div class="row text-center mb-5">
+    <div class="col-md-4 mb-3">
+      <div class="p-4 border rounded-3 shadow-sm">
+        <i class="fa fa-shield-halved text-primary fs-1 mb-3"></i>
+        <h5 class="fw-bold">100% Secure</h5>
+        <p class="text-muted">Payments are encrypted and safe.</p>
+      </div>
+    </div>
+
+    <div class="col-md-4 mb-3">
+      <div class="p-4 border rounded-3 shadow-sm">
+        <i class="fa fa-bolt text-warning fs-1 mb-3"></i>
+        <h5 class="fw-bold">Super Fast</h5>
+        <p class="text-muted">Complete payments in seconds.</p>
+      </div>
+    </div>
+
+    <div class="col-md-4 mb-3">
+      <div class="p-4 border rounded-3 shadow-sm">
+        <i class="fa fa-headset text-success fs-1 mb-3"></i>
+        <h5 class="fw-bold">24×7 Support</h5>
+        <p class="text-muted">We’re always here to help you.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- PAYMENT METHODS PREVIEW -->
+  <h3 class="fw-bold mb-3">Payment Methods</h3>
+  <div class="row mb-5">
+    <div class="col-md-2 col-6 text-center mb-3">
+      <i class="fa fa-credit-card fs-1 text-primary"></i>
+      <p>Card</p>
+    </div>
+
+    <div class="col-md-2 col-6 text-center mb-3">
+      <i class="fa fa-mobile fs-1 text-success"></i>
+      <p>UPI</p>
+    </div>
+
+    <div class="col-md-2 col-6 text-center mb-3">
+      <i class="fa fa-wallet fs-1 text-warning"></i>
+      <p>Wallets</p>
+    </div>
+
+    <div class="col-md-2 col-6 text-center mb-3">
+      <i class="fa fa-university fs-1 text-info"></i>
+      <p>Net Banking</p>
+    </div>
+
+    <div class="col-md-2 col-6 text-center mb-3">
+      <i class="fa fa-calendar fs-1 text-secondary"></i>
+      <p>EMI</p>
+    </div>
+
+    <div class="col-md-2 col-6 text-center mb-3">
+      <i class="fa fa-qrcode fs-1 text-dark"></i>
+      <p>QR Scan</p>
+    </div>
+  </div>
+
+  <!-- POPULAR PLANS SECTION -->
+  <h3 class="fw-bold mb-3">Popular Plans</h3>
+  <div class="row">
+
+    <div class="col-md-4 mb-3">
+      <div class="p-4 border rounded-3 shadow-sm">
+        <h5 class="fw-bold">Basic Plan</h5>
+        <p class="text-muted">₹199 / month</p>
+        <button (click)="choosePlan('Basic')" class="btn btn-primary w-100">Choose Plan</button>
+      </div>
+    </div>
+
+    <div class="col-md-4 mb-3">
+      <div class="p-4 border rounded-3 shadow-sm">
+        <h5 class="fw-bold">Standard Plan</h5>
+        <p class="text-muted">₹399 / month</p>
+        <button (click)="choosePlan('Standard')" class="btn btn-primary w-100">Choose Plan</button>
+      </div>
+    </div>
+
+    <div class="col-md-4 mb-3">
+      <div class="p-4 border rounded-3 shadow-sm">
+        <h5 class="fw-bold">Premium Plan</h5>
+        <p class="text-muted">₹699 / month</p>
+        <button (click)="choosePlan('Premium')" class="btn btn-primary w-100">Choose Plan</button>
+      </div>
+    </div>
+
+  </div>
+
+</div>

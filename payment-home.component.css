@@ -1,0 +1,15 @@
+.payment-home i {
+  transition: 0.3s;
+}
+
+.payment-home i:hover {
+  transform: scale(1.15);
+}
+
+.payment-home .shadow-sm {
+  transition: 0.3s ease-in-out;
+}
+
+.payment-home .shadow-sm:hover {
+  box-shadow: 0px 4px 20px rgba(0,0,0,0.15);
+}

@@ -1,0 +1,13 @@
+.pay-card .form-control {
+  height: 48px;
+  border-radius: 8px;
+}
+
+.pay-card .input-group-text {
+  background: #f1f1f1;
+}
+
+.pay-card button {
+  height: 50px;
+  border-radius: 10px;
+}
