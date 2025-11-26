@@ -1,0 +1,69 @@
+<div class="container mt-4 payment-page">
+
+  <h2 class="text-center fw-bold mb-3">Select Payment Method</h2>
+
+  <!-- Secure Badge -->
+  <div class="secure-box text-success text-center mb-2">
+    <i class="fa fa-lock me-2"></i> 100% Secure Payments
+  </div>
+
+  <!-- Time Estimate -->
+  <p class="text-center text-muted">
+    <i class="fa fa-clock-o me-2"></i> Estimated Time: <b>Instant</b>
+  </p>
+
+  <div class="list-group mt-3">
+
+    <!-- Debit / Credit Card -->
+    <button class="list-group-item list-group-item-action"
+      (click)="selectMethod('Card')">
+      <i class="fa fa-credit-card me-2"></i> Debit / Credit Card
+    </button>
+
+    <!-- UPI -->
+    <button class="list-group-item list-group-item-action"
+      (click)="selectMethod('UPI')">
+      <i class="fa fa-qrcode me-2"></i> UPI (Google Pay, PhonePe, Paytm)
+    </button>
+
+    <!-- Wallets -->
+    <button class="list-group-item list-group-item-action"
+      (click)="selectMethod('Wallet')">
+      <i class="fa fa-wallet me-2"></i> Wallets
+    </button>
+
+    <!-- Net Banking -->
+    <button class="list-group-item list-group-item-action"
+      (click)="selectMethod('NetBanking')">
+      <i class="fa fa-university me-2"></i> Net Banking
+    </button>
+
+    <!-- EMI -->
+    <button class="list-group-item list-group-item-action"
+      (click)="selectMethod('EMI')">
+      <i class="fa fa-money me-2"></i> EMI
+    </button>
+
+    <!-- Pay Later -->
+    <button class="list-group-item list-group-item-action"
+      (click)="selectMethod('PayLater')">
+      <i class="fa fa-hourglass-half me-2"></i> Pay Later
+    </button>
+
+    <!-- QR Code Scan -->
+    <button class="list-group-item list-group-item-action"
+      (click)="selectMethod('QR')">
+      <i class="fa fa-qrcode me-2"></i> QR Code Scan
+    </button>
+
+  </div>
+</div>
+
+<!-- Bootstrap Snackbar / Toast -->
+<div class="position-fixed bottom-0 end-0 p-3" style="z-index: 11">
+  <div id="liveToast" class="toast" role="alert">
+    <div class="toast-body bg-dark text-white fw-bold">
+      {{ toastMessage }}
+    </div>
+  </div>
+</div>

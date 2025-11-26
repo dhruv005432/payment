@@ -1,0 +1,20 @@
+.payment-page {
+  max-width: 480px;
+}
+
+.list-group-item {
+  font-size: 17px;
+  padding: 14px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.list-group-item i {
+  font-size: 20px;
+}
+
+.secure-box {
+  font-size: 16px;
+  font-weight: 600;
+}
