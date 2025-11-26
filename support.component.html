@@ -1,0 +1,63 @@
+<div class="container my-5 payment-support">
+
+  <h2 class="text-center fw-bold mb-4">
+    <i class="fa fa-life-ring me-2 text-primary"></i>
+    Payment Support
+  </h2>
+
+  <!-- Chat Support -->
+  <div class="card mb-4 p-3 shadow-sm">
+    <h5><i class="fa fa-comments me-2 text-success"></i> Chat Support</h5>
+    <p class="text-muted">Chat with our support team for instant assistance.</p>
+    <button class="btn btn-success" (click)="openChat()">
+      <i class="fa fa-comment-dots me-2"></i> Start Chat
+    </button>
+  </div>
+
+  <!-- FAQ -->
+  <div class="card mb-4 p-3 shadow-sm">
+    <h5><i class="fa fa-question-circle me-2 text-warning"></i> FAQ</h5>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">
+        <i class="fa fa-exclamation-circle me-2 text-danger"></i>
+        Payment Failed – what should I do?
+      </li>
+      <li class="list-group-item">
+        <i class="fa fa-exclamation-triangle me-2 text-danger"></i>
+        Money Debited but Payment Failed – how to resolve?
+      </li>
+      <li class="list-group-item">
+        <i class="fa fa-clock-o me-2 text-info"></i>
+        Refund Time – how long does it take?
+      </li>
+    </ul>
+  </div>
+
+  <!-- Contact Form -->
+  <div class="card p-3 shadow-sm">
+    <h5><i class="fa fa-envelope me-2 text-primary"></i> Contact Us</h5>
+    <form (ngSubmit)="submitForm()" #supportForm="ngForm">
+
+      <div class="mb-3">
+        <label class="form-label">Name</label>
+        <input type="text" class="form-control" required [(ngModel)]="form.name" name="name">
+      </div>
+
+      <div class="mb-3">
+        <label class="form-label">Email</label>
+        <input type="email" class="form-control" required [(ngModel)]="form.email" name="email">
+      </div>
+
+      <div class="mb-3">
+        <label class="form-label">Message</label>
+        <textarea class="form-control" rows="4" required [(ngModel)]="form.message" name="message"></textarea>
+      </div>
+
+      <button class="btn btn-primary w-100" type="submit">
+        <i class="fa fa-paper-plane me-2"></i> Submit
+      </button>
+
+    </form>
+  </div>
+
+</div>

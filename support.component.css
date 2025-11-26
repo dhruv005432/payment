@@ -1,0 +1,21 @@
+.payment-support .card {
+  border-radius: 10px;
+}
+
+.payment-support .form-control {
+  border-radius: 8px;
+}
+
+.payment-support button {
+  border-radius: 10px;
+}
+
+.payment-support ul li {
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+}
+
+.payment-support ul li i {
+  width: 25px;
+}
