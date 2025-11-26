@@ -1,0 +1,56 @@
+<div class="pay-upi container py-4">
+
+  <h2 class="fw-bold mb-4">
+    <i class="fa fa-mobile text-success me-2"></i>
+    UPI Payment
+  </h2>
+
+  <div class="p-4 border rounded-3 shadow-sm bg-white">
+
+    <!-- ENTER UPI ID -->
+    <div class="mb-3">
+      <label class="form-label fw-bold">Enter UPI ID</label>
+      <div class="input-group">
+        <span class="input-group-text"><i class="fa fa-user"></i></span>
+        <input type="text"
+               class="form-control"
+               placeholder="example@upi"
+               [(ngModel)]="upiId"
+               (input)="generateQr()"
+               name="upiId">
+      </div>
+    </div>
+
+    <button class="btn btn-outline-success w-100 mb-4" 
+            (click)="enterUpi()">
+      Verify UPI ID
+    </button>
+
+    <div class="text-center my-3">
+      <p class="text-muted">OR</p>
+    </div>
+
+    <!-- QR CODE IMAGE (ONLINE GENERATED) -->
+    <div class="qr-box text-center p-4 border rounded-3 mb-4">
+      <i class="fa fa-qrcode fs-1 text-primary"></i>
+      <p class="mt-2 text-muted">Scan QR to Pay</p>
+
+      <img *ngIf="qrCodeUrl"
+           [src]="qrCodeUrl"
+           alt="UPI QR Code"
+           class="qr-img mb-3" />
+
+      <button class="btn btn-outline-primary w-100" 
+              (click)="scanQR()">
+        <i class="fa fa-camera me-2"></i> Scan QR Code
+      </button>
+    </div>
+
+    <!-- VERIFY & PAY -->
+    <button class="btn btn-success btn-lg w-100"
+            (click)="verifyAndPay()">
+      Verify & Pay
+    </button>
+
+  </div>
+</div>

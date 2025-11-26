@@ -1,0 +1,25 @@
+.pay-upi .form-control {
+  height: 48px;
+  border-radius: 8px;
+}
+
+.qr-box {
+  background: #f9f9f9;
+  transition: 0.3s ease;
+}
+
+.qr-box:hover {
+  background: #eef5ff;
+  box-shadow: 0px 4px 18px rgba(0,0,0,0.10);
+}
+
+.qr-img {
+  width: 200px;
+  height: 200px;
+  object-fit: contain;
+  border-radius: 8px;
+}
+
+button {
+  border-radius: 10px;
+}
